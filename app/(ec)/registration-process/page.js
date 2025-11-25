@@ -35,7 +35,9 @@ export default function RegistrationProcess() {
               {/* Box Head */}
               <div className="flex justify-center">
                 <div className="bg-[#F0FDF4] border border-[#BDF7D2] w-max mt-6 px-4 py-2 rounded">
-                  <p className="font-semibold text-xl">{step?.title}</p>
+                  <p className="font-semibold text-lg md:text-xl">
+                    {step?.title}
+                  </p>
                 </div>
               </div>
 
@@ -44,7 +46,9 @@ export default function RegistrationProcess() {
               {step?.subsections.map((section) => (
                 <div key={section?.title} className="mt-4">
                   {section?.title && (
-                    <p className="font-semibold text-lg mb-2">{section?.title}</p>
+                    <p className="font-semibold md:text-lg mb-2">
+                      {section?.title}
+                    </p>
                   )}
 
                   <ul>

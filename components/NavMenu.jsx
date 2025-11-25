@@ -58,24 +58,6 @@ export default function NavMenu() {
                 asChild
                 className="px-3 py-2 text-sm font-medium hover:bg-[#006C39] rounded transition-colors text-white hover:text-white"
               >
-                <Link href={"/"}>প্রশ্নোত্তর</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className="px-3 py-2 text-sm font-medium hover:bg-[#006C39] rounded transition-colors text-white hover:text-white"
-              >
-                <Link href={"/"}> নির্বাচনী যোগাযোগ</Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <NavigationMenuLink
-                asChild
-                className="px-3 py-2 text-sm font-medium hover:bg-[#006C39] rounded transition-colors text-white hover:text-white"
-              >
                 <Link href={"/president-election"}> প্রকল্প/কর্মসূচি</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -85,7 +67,19 @@ export default function NavMenu() {
                 asChild
                 className="px-3 py-2 text-sm font-medium hover:bg-[#006C39] rounded transition-colors text-white hover:text-white"
               >
-                <Link href={"/parliamentary-election"}> নির্বাচন কমিশন পরিচিতি</Link>
+                <Link href={"/political-parties"}>রাজনৈতিক দলসমূহ</Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuLink
+                asChild
+                className="px-3 py-2 text-sm font-medium hover:bg-[#006C39] rounded transition-colors text-white hover:text-white"
+              >
+                <Link href={"/parliamentary-election"}>
+                  {" "}
+                  নির্বাচন কমিশন পরিচিতি
+                </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
 
