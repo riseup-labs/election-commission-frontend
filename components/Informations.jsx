@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ChevronRight } from "lucide-react";
 import { FileText, User, HandHeart, ChartLine } from "lucide-react";
 import { InfoCards } from "./InfoCards";
+import Link from "next/link";
 
 const Informations = () => {
   return (
@@ -142,6 +143,7 @@ function InfoCardGrid() {
       iconBg: "bg-[#F97316]",
       title: "নিবন্ধন করুন",
       description: "নতুন ভোটার নিবন্ধন ও তথ্য হালনাগাদ",
+      href: "/registration-process",
     },
     {
       id: 2,
@@ -149,6 +151,7 @@ function InfoCardGrid() {
       iconBg: "bg-[#22C55E]",
       title: "নিবন্ধন প্রক্রিয়া",
       description: "আপনার ভোটার তথ্য ও কেন্দ্র খুঁজুন",
+      href: "/registration-process",
     },
     {
       id: 3,
@@ -156,6 +159,7 @@ function InfoCardGrid() {
       iconBg: "bg-[#A855F7]",
       title: "ভোটার নিবন্ধন সংক্রান্ত ফর্ম",
       description: "সর্বশেষ নির্বাচনের ফলাফল দেখুন",
+      href: "/registration-process",
     },
     {
       id: 4,
@@ -163,6 +167,7 @@ function InfoCardGrid() {
       iconBg: "bg-[#EF4444]",
       title: "ভোটার নিবন্ধন সংক্রান্ত পরিপত্র ও অন্যান্য",
       description: "নতুন ভোটার নিবন্ধন ও তথ্য হালনাগাদ",
+      href: "/registration-process",
     },
   ];
 
@@ -178,7 +183,9 @@ function InfoCardGrid() {
         {cards.map((card) => {
           return (
             <div key={card.id} className="shadow-md hover:shadow-lg">
-              <InfoCards info={card} />
+              <Link href={card?.href}>
+                <InfoCards info={card} />
+              </Link>
             </div>
           );
         })}
