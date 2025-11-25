@@ -1,0 +1,40 @@
+const VisitorStats = () => {
+  return (
+    <div className="relative md:h-[443px] w-full overflow-hidden bg-[url('/images/visitor-bg.png')] bg-no-repeat bg-cover lg:bg-position-[center_top_-200px] 3xl:bg-position-[center_top_-280px]">
+      {/* background overlay */}
+      <div className="absolute inset-0 bg-black/70 pointer-events-none" />
+
+      <div className="flex items-center h-full">
+        <div className="relative max-w-3xl mx-auto text-center px-4 py-15">
+          {/* Title */}
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
+            ওয়েবসাইট পরিদর্শন
+          </h2>
+
+          {/* Stats grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
+            {/* Card 1 */}
+            <div className="bg-white rounded-sm shadow-md py-10 px-6">
+              <p className="text-4xl font-bold text-green-700">580</p>
+              <p className="text-gray-600 mt-2xsext-sm">আজকের পরিদর্শন</p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white rounded-sm shadow-md py-10 px-6">
+              <p className="text-4xl font-bold text-green-700">1025</p>
+              <p className="text-gray-600 mt-2 text-sm">এই সপ্তাহে</p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white rounded-sm shadow-md py-10 px-6">
+              <p className="text-4xl font-bold text-green-700">102456</p>
+              <p className="text-gray-600 mt-2 text-sm">মোট পরিদর্শন</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default VisitorStats;
