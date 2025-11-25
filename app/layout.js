@@ -33,6 +33,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
+        suppressHydrationWarning
         className={`${kalpurush.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
