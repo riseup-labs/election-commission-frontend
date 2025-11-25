@@ -16,10 +16,12 @@ const PageTitle = ({ title = "", routes = [] }) => {
         </div>
 
         <div>
-          {routes.map((route, i) => (
+          {routes.map((route, i, arr) => (
             <span
               key={route}
-              className={`text-sm text-[${i > 0 ? "#374151" : "#009951"}]`}
+              className={`text-sm text-[${
+                i < arr.length-1 ? "#009951" : "#374151"
+              }]`}
             >
               {i > 0 && <span> /</span>} {route}
             </span>
