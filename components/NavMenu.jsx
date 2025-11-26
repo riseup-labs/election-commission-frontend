@@ -62,7 +62,7 @@ export default function NavMenu() {
               </NavigationMenuLink>
             </NavigationMenuItem>
 
-             <NavigationMenuItem>
+            <NavigationMenuItem>
               <NavigationMenuLink
                 asChild
                 className="px-3 py-2 text-sm font-medium hover:bg-[#006C39] rounded transition-colors text-white hover:text-white"
@@ -89,6 +89,17 @@ export default function NavMenu() {
               >
                 <Link href={"/election-commissioners"}>
                   নির্বাচন কমিশন পরিচিতি
+                </Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuLink
+                asChild
+                className="px-3 py-2 text-sm font-medium hover:bg-[#006C39] rounded transition-colors text-white hover:text-white"
+              >
+                <Link href={"/secretariat-officials"}>
+                  সচিবালয়ের কর্মকর্তাবৃন্দ
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>

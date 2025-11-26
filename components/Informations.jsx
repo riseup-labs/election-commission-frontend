@@ -74,7 +74,7 @@ function TabTable() {
       {/* Tabs - Horizontal Scroll */}
       <div className="overflow-x-auto scrollbar-hide">
         <div className="flex min-w-max border-b border-slate-200">
-          {tabs.map((tab, index) => (
+          {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
