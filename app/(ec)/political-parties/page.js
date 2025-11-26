@@ -9,7 +9,7 @@ export default function PoliticalParties() {
         routes={["হোম", "নিবন্ধিত রাজনৈতিক দল"]}
       />
 
-      <div className="w-full overflow-x-auto mt-4">
+      <div className="w-full overflow-x-auto mt-4 md:pl-4">
         <PartiesTable />
       </div>
     </div>
