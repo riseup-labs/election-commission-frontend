@@ -58,7 +58,18 @@ export default function NavMenu() {
                 asChild
                 className="px-3 py-2 text-sm font-medium hover:bg-[#006C39] rounded transition-colors text-white hover:text-white"
               >
-                <Link href={"/president-election"}> প্রকল্প/কর্মসূচি</Link>
+                <Link href={"/president-election"}>রাষ্ট্রপতি নির্বাচন</Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+
+             <NavigationMenuItem>
+              <NavigationMenuLink
+                asChild
+                className="px-3 py-2 text-sm font-medium hover:bg-[#006C39] rounded transition-colors text-white hover:text-white"
+              >
+                <Link href={"/parliamentary-election"}>
+                  জাতীয় সংসদ নির্বাচন
+                </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
 
@@ -76,8 +87,7 @@ export default function NavMenu() {
                 asChild
                 className="px-3 py-2 text-sm font-medium hover:bg-[#006C39] rounded transition-colors text-white hover:text-white"
               >
-                <Link href={"/parliamentary-election"}>
-                  {" "}
+                <Link href={"/election-commissioners"}>
                   নির্বাচন কমিশন পরিচিতি
                 </Link>
               </NavigationMenuLink>
