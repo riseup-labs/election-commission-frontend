@@ -41,7 +41,7 @@ export default function RecentNews() {
           <p className="text-[#15803D] font-semibold">সাম্প্রতিক খবর</p>
 
           <Link
-            href="/"
+            href="/recent-news"
             className="text-[#15803D] text-sm flex items-center gap-1"
           >
             সব দেখুন

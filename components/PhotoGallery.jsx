@@ -10,7 +10,8 @@ export default function PhotoGallery() {
         <p className="text-[#15803D] font-semibold">ফটো গ্যালারী</p>
 
         <Link
-          href="/photo-gallery"
+          href="/"
+          // href="/photo-gallery"
           className="text-[#15803D] text-sm flex items-center gap-1"
         >
           সব দেখুন
