@@ -14,7 +14,7 @@ const PartiesTable = () => {
   const router = useRouter();
 
   return (
-    <div>
+    <>
       <Table className="min-w-max">
         <TableHeader className="bg-[#F9FAFB]">
           <TableRow>
@@ -59,7 +59,7 @@ const PartiesTable = () => {
           })}
         </TableBody>
       </Table>
-    </div>
+    </>
   );
 };
 

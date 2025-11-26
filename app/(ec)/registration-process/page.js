@@ -35,7 +35,7 @@ export default function RegistrationProcess() {
               {/* Box Head */}
               <div className="flex justify-center">
                 <div className="bg-[#F0FDF4] border border-[#BDF7D2] w-max mt-6 px-4 py-2 rounded">
-                  <p className="font-semibold text-lg md:text-xl">
+                  <p className="font-semibold text-lg md:text-base">
                     {step?.title}
                   </p>
                 </div>
