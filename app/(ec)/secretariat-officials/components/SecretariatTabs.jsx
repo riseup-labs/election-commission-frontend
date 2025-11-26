@@ -1,12 +1,23 @@
+"use client";
+
+import { useState } from "react";
+
 const SecretariatTabs = () => {
+  const [activeTab, setActiveTab] = useState(null);
+
   return (
     <div className="overflow-x-auto scrollbar-hide my-4">
       <div className="flex min-w-max gap-2">
-        {tabs.map((tab, i) => {
+        {tabs.map((tab) => {
           return (
             <button
-              key={tab?.id + i}
-              className={`bg-[#F2F4F7] text-sm rounded-3xl relative shrink-0 px-3 py-1.5 font-medium transition-all duration-200 hover:bg-[#F2F4F7] cursor-pointer`}
+              key={tab?.id}
+              className={`${
+                activeTab === tab?.id
+                  ? "bg-[#006C39] hover:bg-[#006C39] text-white"
+                  : "bg-[#F2F4F7] hover:bg-[#F2F4F7]"
+              } text-sm rounded-3xl relative shrink-0 px-3 py-1.5 font-medium transition-all duration-200 cursor-pointer`}
+              onClick={() => setActiveTab(tab?.id)}
             >
               <span className="relative z-10 whitespace-nowrap">
                 {tab?.title}

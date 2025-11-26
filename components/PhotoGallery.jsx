@@ -5,98 +5,12 @@ import Link from "next/link";
 export default function PhotoGallery() {
   return (
     <div className="container mx-auto px-4 py-10">
-      {/* <div className="grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-3 gap-4">
-        <div className="col-span-12 row-span-1 lg:col-span-2 lg:row-span-2 relative group overflow-hidden">
-          <GalleryImage height="h-[350px]" /> <GalleryContent />
-        </div>
-        <div className="col-span-12 lg:col-span-2 lg:col-start-3 relative group overflow-hidden">
-          <GalleryImage height="h-full" /> <GalleryContent />
-        </div>
-        <div className="col-span-2 col-start-3 row-start-2 relative group overflow-hidden">
-          <GalleryImage height="h-full" /> <GalleryContent />
-        </div>
-        <div className="row-start-3 relative group overflow-hidden">
-          <GalleryImage height="h-full" /> <GalleryContent />
-        </div>
-        <div className="row-start-3 relative group overflow-hidden">
-          <GalleryImage height="h-full" /> <GalleryContent />
-        </div>
-        <div className="row-start-3 relative group overflow-hidden">
-          <GalleryImage height="h-full" /> <GalleryContent />
-        </div>
-        <div className="row-start-3 relative group overflow-hidden">
-          <GalleryImage height="h-full" /> <GalleryContent />
-        </div>
-      </div> */}
-
-      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-3 gap-4">
-        <div className="md:col-span-1 lg:col-span-2 lg:row-span-2 relative group overflow-hidden">
-          <GalleryImage height="h-[350px]" />
-          <GalleryContent />
-        </div>
-        <div className="md:col-span-1 lg:col-span-2 lg:col-start-3 relative group overflow-hidden">
-          <GalleryImage height="h-[350px] md:h-full" />
-          <GalleryContent />
-        </div>
-        <div className="md:col-span-1 lg:col-span-2 lg:col-start-3 lg:row-start-2 relative group overflow-hidden">
-          <GalleryImage height="h-[350px] md:h-full" />
-          <GalleryContent />
-        </div>
-        <div className="lg:row-start-3 relative group overflow-hidden">
-          <GalleryImage height="h-[350px] md:h-full" />
-          <GalleryContent />
-        </div>
-        <div className="lg:row-start-3 relative group overflow-hidden">
-          <GalleryImage height="h-[350px] md:h-full" />
-          <GalleryContent />
-        </div>
-        <div className="lg:row-start-3 relative group overflow-hidden">
-          <GalleryImage height="h-[350px] md:h-full" />
-          <GalleryContent />
-        </div>
-        <div className="lg:row-start-3 relative group overflow-hidden">
-          <GalleryImage height="h-[350px] md:h-full" />
-          <GalleryContent />
-        </div>
-      </div> */}
-
-      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-3 gap-4">
-        <div className="md:col-span-2 lg:col-span-2 lg:row-span-2 relative group overflow-hidden">
-          <GalleryImage height="h-[350px]" />
-          <GalleryContent />
-        </div>
-        <div className="lg:col-span-2 lg:col-start-3 relative group overflow-hidden">
-          <GalleryImage height="h-[350px] md:h-full" />
-          <GalleryContent />
-        </div>
-        <div className="lg:col-span-2 lg:col-start-3 lg:row-start-2 relative group overflow-hidden">
-          <GalleryImage height="h-[350px] md:h-full" />
-          <GalleryContent />
-        </div>
-        <div className="lg:row-start-3 relative group overflow-hidden">
-          <GalleryImage height="h-[350px] md:h-full" />
-          <GalleryContent />
-        </div>
-        <div className="lg:row-start-3 relative group overflow-hidden">
-          <GalleryImage height="h-[350px] md:h-full" />
-          <GalleryContent />
-        </div>
-        <div className="lg:row-start-3 relative group overflow-hidden">
-          <GalleryImage height="h-[350px] md:h-full" />
-          <GalleryContent />
-        </div>
-        <div className="lg:row-start-3 relative group overflow-hidden">
-          <GalleryImage height="h-[350px] md:h-full" />
-          <GalleryContent />
-        </div>
-      </div> */}
-
       {/* Section Header */}
       <div className="flex items-center justify-between mb-6">
         <p className="text-[#15803D] font-semibold">ফটো গ্যালারী</p>
 
         <Link
-          href="/"
+          href="/photo-gallery"
           className="text-[#15803D] text-sm flex items-center gap-1"
         >
           সব দেখুন
