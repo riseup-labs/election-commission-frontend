@@ -50,31 +50,28 @@ function Countdown({ targetDate }) {
     return () => clearInterval(timer);
   }, [targetDate]);
 
+  const dateUnits = [
+    { value: toBanglaNumber(timeLeft.days), label: "দিন" },
+    { value: toBanglaNumber(timeLeft.hours), label: "ঘণ্টা" },
+    { value: toBanglaNumber(timeLeft.minutes), label: "মিনিট" },
+    { value: toBanglaNumber(timeLeft.seconds), label: "সেকেন্ড" },
+  ];
+
+  console.log(timeLeft);
   return (
-    <div className="flex items-center gap-4 text-center">
-      {/* Days */}
-      <div className="bg-purple-700 text-white px-4 py-2 rounded-md">
-        <p className="text-2xl font-bold">{toBanglaNumber(timeLeft.days)}</p>
-        <p className="text-sm">দিন</p>
-      </div>
-
-      {/* Hours */}
-      <div className="bg-purple-700 text-white px-4 py-2 rounded-md">
-        <p className="text-2xl font-bold">{toBanglaNumber(timeLeft.hours)}</p>
-        <p className="text-sm">ঘণ্টা</p>
-      </div>
-
-      {/* Minutes */}
-      <div className="bg-purple-700 text-white px-4 py-2 rounded-md">
-        <p className="text-2xl font-bold">{toBanglaNumber(timeLeft.minutes)}</p>
-        <p className="text-sm">মিনিট</p>
-      </div>
-
-      {/* Seconds */}
-      <div className="bg-purple-700 text-white px-4 py-2 rounded-md">
-        <p className="text-2xl font-bold">{toBanglaNumber(timeLeft.seconds)}</p>
-        <p className="text-sm">সেকেন্ড</p>
-      </div>
+    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl w-full">
+      {dateUnits.map((units) => (
+        <div key={units?.label} className="flex flex-col items-center">
+          <div className="bg-black/20 backdrop-blur rounded-t-sm w-full  lg:w-[120px] h-16 sm:h-20 flex items-center justify-center">
+            <span className="text-white text-2xl sm:text-3xl lg:text-4xl font-semibold">
+              {units?.value}
+            </span>
+          </div>
+          <button className="bg-[#FF4444] hover:bg-[#FF4444]/90 text-white text-sm py-2 px-4 sm:px-6 rounded-b-sm w-full transition-colors">
+            {units?.label}
+          </button>
+        </div>
+      ))}
     </div>
   );
 }
