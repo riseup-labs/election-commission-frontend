@@ -3,7 +3,7 @@ const HeroSection = () => {
     <>
       <div
         className="relative min-h-[400px] sm:min-h-[500px] lg:h-[443px] w-full overflow-hidden bg-[url('/images/hero-bg.png')] 
-        bg-no-repeat bg-cover bg-position-[center_top] sm:bg-position-[center_top_-100px] lg:bg-position-[center_top_-180px]"
+        bg-no-repeat bg-cover bg-position-[center_top] m:bg-position-[center_top_-100px] lg:bg-position-[center_top_-180px]"
       >
         {/* background overlay */}
         <div
@@ -19,12 +19,12 @@ const HeroSection = () => {
           {/* Content Container */}
           <div className="relative flex flex-col lg:flex-row justify-between w-full gap-8 lg:gap-12">
             {/* Left Section - Title & Description */}
-            <div className="max-w-2xl">
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 leading-tight text-center lg:text-start">
+            <div className="lg:max-w-2xl">
+              <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight text-center lg:text-start">
                 স্বচ্ছ ও নিরপেক্ষ নির্বাচনের মাধ্যমে গণতন্ত্র সুদৃঢ়করণ
               </h1>
 
-              <p className="text-sm sm:text-base text-white/90 max-w-xl leading-relaxed text-center lg:text-start">
+              <p className="text-sm sm:text-base text-white/90 leading-relaxed text-center lg:text-start">
                 বাংলাদেশ নির্বাচন কমিশন একটি স্বাধীন সাংবিধানিক প্রতিষ্ঠান যা
                 দেশের সকল নির্বাচন পরিচালনা ও তত্ত্বাবধান করে।
               </p>
@@ -50,7 +50,7 @@ const HeroSection = () => {
                       key={units?.label}
                       className="flex flex-col items-center"
                     >
-                      <div className="bg-black/20 backdrop-blur rounded-t-sm w-full sm:w-[100px] lg:w-[120px] h-16 sm:h-20 flex items-center justify-center">
+                      <div className="bg-black/20 backdrop-blur rounded-t-sm w-full  lg:w-[120px] h-16 sm:h-20 flex items-center justify-center">
                         <span className="text-white text-2xl sm:text-3xl lg:text-4xl font-semibold">
                           {units?.value}
                         </span>
