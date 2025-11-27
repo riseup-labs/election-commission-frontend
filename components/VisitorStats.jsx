@@ -1,4 +1,13 @@
+"use client";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
+
 const VisitorStats = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // run only one time
+    threshold: 0.3, // start when 30% visible
+  });
+
   return (
     <div className="relative md:h-[443px] w-full overflow-hidden bg-[url('/images/visitor-bg.png')] bg-no-repeat bg-cover lg:bg-position-[center_top_-200px] 3xl:bg-position-[center_top_-280px]">
       {/* background overlay */}
@@ -15,19 +24,25 @@ const VisitorStats = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
             {/* Card 1 */}
             <div className="bg-white rounded-sm shadow-md py-10 px-6">
-              <p className="text-4xl font-bold text-green-700">580</p>
+              <p className="text-4xl font-bold text-green-700">
+                {inView && <CountUp duration={3} start={0} end={580} />}
+              </p>
               <p className="text-gray-600 mt-2xsext-sm">আজকের পরিদর্শন</p>
             </div>
 
             {/* Card 2 */}
             <div className="bg-white rounded-sm shadow-md py-10 px-6">
-              <p className="text-4xl font-bold text-green-700">1025</p>
+              <p className="text-4xl font-bold text-green-700">
+                <CountUp duration={3} start={0} end={1025} />
+              </p>
               <p className="text-gray-600 mt-2 text-sm">এই সপ্তাহে</p>
             </div>
 
             {/* Card 3 */}
             <div className="bg-white rounded-sm shadow-md py-10 px-6">
-              <p className="text-4xl font-bold text-green-700">102456</p>
+              <p className="text-4xl font-bold text-green-700">
+                <CountUp duration={3} start={100000} end={102456} />
+              </p>
               <p className="text-gray-600 mt-2 text-sm">মোট পরিদর্শন</p>
             </div>
           </div>

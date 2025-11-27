@@ -14,19 +14,22 @@ const toBanglaNumber = (num) => {
     8: "৮",
     9: "৯",
   };
-  return num
-    .toString()
-    .split("")
-    .map((n) => digits[n])
-    .join("");
+
+  return num === null
+    ? null
+    : num
+        .toString()
+        .split("")
+        .map((n) => digits[n])
+        .join("");
 };
 
 function Countdown({ targetDate }) {
   const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
+    days: null,
+    hours: null,
+    minutes: null,
+    seconds: null,
   });
 
   useEffect(() => {
@@ -57,14 +60,13 @@ function Countdown({ targetDate }) {
     { value: toBanglaNumber(timeLeft.seconds), label: "সেকেন্ড" },
   ];
 
-  console.log(timeLeft);
   return (
     <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl w-full">
       {dateUnits.map((units) => (
         <div key={units?.label} className="flex flex-col items-center">
           <div className="bg-black/20 backdrop-blur rounded-t-sm w-full  lg:w-[120px] h-16 sm:h-20 flex items-center justify-center">
             <span className="text-white text-2xl sm:text-3xl lg:text-4xl font-semibold">
-              {units?.value}
+              {units?.value === null ? "--" : units?.value}
             </span>
           </div>
           <button className="bg-[#FF4444] hover:bg-[#FF4444]/90 text-white text-sm py-2 px-4 sm:px-6 rounded-b-sm w-full transition-colors">

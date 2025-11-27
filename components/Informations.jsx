@@ -18,19 +18,6 @@ const Informations = () => {
           <InfoCardGrid />
         </div>
       </div>
-      {/* <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        <div className="lg:col-span-7">
-          <TabTable />
-        </div>
-
-        <div className="lg:col-span-5">
-          <InfoCardGrid />
-        </div>
-      </div> */}
-      {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <TabTable />
-        <InfoCardGrid />
-      </div> */}
     </div>
   );
 };
@@ -93,17 +80,66 @@ function TabTable() {
       },
     ],
     updates: [
-      { id: "01", title: "নতুন আপডেট তথ্য", date: "Feb 12, 2023" },
-      { id: "02", title: "সাম্প্রতিক পরিবর্তন", date: "Feb 12, 2023" },
+      {
+        id: "০১",
+        title: "প্রবাসী ভোটারদের ভোটদান বিষয়ক",
+        date: "Feb 13, 2023",
+      },
+      {
+        id: "০২",
+        title: "পোস্টাল ভোটিং (আইটি সাপোর্টেড))",
+        date: "Feb 13, 2023",
+      },
+      { id: "০৩", title: "বিদেশ ভ্রমন", date: "Feb 13, 2023" },
+      {
+        id: "০৪",
+        title: "দ্বাদশ জাতীয় সংসদ নির্বাচনের প্রার্থীগণের হলফনামা",
+        date: "Feb 13, 2023",
+      },
     ],
     daily: [
-      { id: "01", title: "দৈনিক কার্যক্রম রিপোর্ট", date: "Feb 13, 2023" },
+      {
+        id: "০১",
+        title: "প্রবাসী ভোটারদের ভোটদান বিষয়ক",
+        date: "Feb 13, 2023",
+      },
+      {
+        id: "০২",
+        title: "পোস্টাল ভোটিং (আইটি সাপোর্টেড))",
+        date: "Feb 13, 2023",
+      },
+      { id: "০৩", title: "বিদেশ ভ্রমন", date: "Feb 13, 2023" },
     ],
     decisions: [
-      { id: "01", title: "বোর্ড সিদ্ধান্ত নং ০১", date: "Feb 10, 2023" },
+      {
+        id: "০১",
+        title: "প্রবাসী ভোটারদের ভোটদান বিষয়ক",
+        date: "Feb 13, 2023",
+      },
+      {
+        id: "০২",
+        title: "পোস্টাল ভোটিং (আইটি সাপোর্টেড))",
+        date: "Feb 13, 2023",
+      },
+      { id: "০৩", title: "বিদেশ ভ্রমন", date: "Feb 13, 2023" },
+      {
+        id: "০৪",
+        title: "দ্বাদশ জাতীয় সংসদ নির্বাচনের প্রার্থীগণের হলফনামা",
+        date: "Feb 13, 2023",
+      },
     ],
     recruitment: [
-      { id: "01", title: "নতুন নিয়োগ বিজ্ঞপ্তি", date: "Feb 11, 2023" },
+      {
+        id: "০১",
+        title: "প্রবাসী ভোটারদের ভোটদান বিষয়ক",
+        date: "Feb 13, 2023",
+      },
+      {
+        id: "০২",
+        title: "পোস্টাল ভোটিং (আইটি সাপোর্টেড))",
+        date: "Feb 13, 2023",
+      },
+      { id: "০৩", title: "বিদেশ ভ্রমন", date: "Feb 13, 2023" },
     ],
     establishment: [
       { id: "01", title: "প্রতিষ্ঠান সংক্রান্ত", date: "Feb 09, 2023" },
@@ -142,7 +178,9 @@ function TabTable() {
               {tab.count && (
                 <div
                   className={` w-4 h-4 relative z-10 flex items-center justify-center rounded-full ${
-                    activeTab === tab.id ? "bg-white text-[#FF4444]" : "bg-[#FF4444] text-white"
+                    activeTab === tab.id
+                      ? "bg-white text-[#FF4444]"
+                      : "bg-[#FF4444] text-white"
                   }`}
                 >
                   <span className="leading-none text-xs">{tab.count}</span>
