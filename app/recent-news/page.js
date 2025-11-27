@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/input-group";
 import { Search } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function RecentNews() {
   return (
@@ -52,14 +53,12 @@ export default function RecentNews() {
                     চড়া মূল্যের কারণে গোশত কিনে খাওয়া এখন দরিদ্রদের জন্য
                     স্বপ্নের মতো ব্যাপার হয়ে দাঁড়িয়েছে।
                   </p>
-                  <Button
-                    variant="outline"
-                    className={
-                      "w-full mt-2 rounded border-[#A1D6BC] text-[#008E48] cursor-pointer font-semibold hover:bg-[#008E48] hover:text-white"
-                    }
+                  <Link
+                    href={"/recent-news/details"}
+                    className="w-full mt-2 rounded border border-[#A1D6BC] text-[#008E48] font-semibold hover:bg-[#008E48] hover:text-white block py-2 px-4 text-center"
                   >
                     বিস্তারিত দেখুন
-                  </Button>
+                  </Link>
                 </div>
               </div>
             );
