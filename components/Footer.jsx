@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="relative lg:h-[443px] w-full overflow-hidden bg-[url('/images/visitor-bg.png')] bg-no-repeat bg-cover lg:bg-position-[center_top_-200px] 3xl:bg-position-[center_top_-280px] flex flex-col justify-between">
       {/* background overlay */}
-      <div className="absolute inset-0 bg-black/95 pointer-events-none" />
+      <div className="absolute inset-0 bg-black/80 pointer-events-none" />
       <div className="container mx-auto px-4 py-8 md:py-12 relative z-10">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">

@@ -7,12 +7,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import Image from "next/image";
+import Link from "next/link";
 
 const Members = () => {
   return (
     <div className="bg-[#F9FAFB] py-15">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="flex items-center justify-center">
             <ImageSlider />
           </div>
@@ -21,11 +22,13 @@ const Members = () => {
               <SectionTitle label="প্রধান নির্বাচন কমিশনার" />
             </div>
             <div className="grid grid-cols-1 gap-2.5">
-              <MemberCard
-                name="জনাব এ, এম, এম, নাসির উদ্দিন"
-                image="/images/nasir.png"
-                details="জনাব এ এম এম নাসির উদ্দিন ২০২৪ সালের ২১ নভেম্বর তারিখে বাংলাদেশের প্রধান নির্বাচন কমিশনার (সিইসি) হিসেবে নিয়োগ লাভ করেন।"
-              />
+              <Link href={"/"}>
+                <MemberCard
+                  name="জনাব এ, এম, এম, নাসির উদ্দিন"
+                  image="/images/nasir.png"
+                  details="জনাব এ এম এম নাসির উদ্দিন ২০২৪ সালের ২১ নভেম্বর তারিখে বাংলাদেশের প্রধান নির্বাচন কমিশনার (সিইসি) হিসেবে নিয়োগ লাভ করেন।"
+                />
+              </Link>
             </div>
             <div className="my-4">
               <SectionTitle label="নির্বাচন কমিশনার" />
@@ -48,7 +51,7 @@ const Members = () => {
 };
 
 const MemberCard = ({ name = "", image = "", details = "" }) => (
-  <div className="bg-[#653887] shadow-xs rounded-md pl-1 w-full">
+  <div className="w-full border-l-4 border-[#653887] rounded-md">
     <div className="min-h-[120px] h-full bg-white rounded p-2 flex gap-3 items-center">
       <div className="w-20 shrink-0">
         <Image
@@ -121,7 +124,7 @@ function ImageSlider() {
     },
     {
       id: 3,
-      image: "/images/ec2.jpg",
+      image: "/images/ec1.png",
       title: "Government Complex",
       description: "Administrative headquarters",
     },
@@ -140,10 +143,7 @@ function ImageSlider() {
         spaceBetween={30}
         slidesPerView={1}
         navigation
-        pagination={{
-          clickable: true,
-          dynamicBullets: true,
-        }}
+        pagination={{ clickable: true, dynamicBullets: true }}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
@@ -164,14 +164,29 @@ function ImageSlider() {
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
-              <Image
-                src={slide.image || "/placeholder.svg"}
-                alt={slide.title}
-                fill
-                className="object-cover rounded-lg"
-                priority={slide.id === 1}
-              />
+            <div className="shadow-2xl">
+              <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px]">
+                <Image
+                  src={slide.image || "/placeholder.svg"}
+                  alt={slide.title}
+                  fill
+                  className="object-cover rounded-t-lg"
+                  priority={slide.id === 1}
+                />
+              </div>
+
+              <div className="bg-white p-4">
+                <p className="font-semibold">বাংলাদেশ নির্বাচন কমিশন</p>
+                <p className="text-sm mt-2 pb-2">
+                  বাংলাদেশ নির্বাচন কমিশন ভবনটি ঢাকার আগারগাঁও এলাকায় অবস্থিত,
+                  যা দেশের নির্বাচন পরিচালনা ব্যবস্থার কেন্দ্রীয় প্রশাসনিক
+                  কার্যালয় হিসেবে ব্যবহৃত হয়। এখানে জাতীয় ও স্থানীয় নির্বাচনের
+                  পরিকল্পনা, পরিচালনা এবং ফলাফল প্রকাশের সমস্ত কার্যক্রম সম্পন্ন
+                  হয়। এছাড়া ভোটার তালিকা প্রস্তুত ও হালনাগাদ, রাজনৈতিক দল
+                  নিবন্ধন, নির্বাচনী তদারকি এবং ইলেকট্রনিক ভোটিং সিস্টেম
+                  সম্পর্কিত কার্যক্রমও এখান থেকে পরিচালিত হয়।
+                </p>
+              </div>
             </div>
           </SwiperSlide>
         ))}
@@ -188,6 +203,31 @@ function ImageSlider() {
           border-radius: 50%;
           transition: all 0.3s ease;
           padding: 6px;
+          top: 33% !important;
+        }
+
+        /* For md screens */
+        @media (min-width: 640px) {
+          .swiper-button-next,
+          .swiper-button-prev {
+            top: 35% !important;
+          }
+        }
+
+        /* For md screens */
+        @media (min-width: 768px) {
+          .swiper-button-next,
+          .swiper-button-prev {
+            top: 40% !important;
+          }
+        }
+
+        /* For lg screens */
+        @media (min-width: 1024px) {
+          .swiper-button-next,
+          .swiper-button-prev {
+            top: 40% !important;
+          }
         }
 
         .swiper-button-next:hover,
@@ -202,7 +242,7 @@ function ImageSlider() {
         }
 
         .swiper-pagination-bullet {
-          background: white;
+          background: #86868636;
           opacity: 0.5;
           width: 10px;
           height: 10px;
@@ -210,7 +250,7 @@ function ImageSlider() {
 
         .swiper-pagination-bullet-active {
           opacity: 1;
-          background: white;
+          background: #67b878;
         }
 
         @media (max-width: 640px) {
