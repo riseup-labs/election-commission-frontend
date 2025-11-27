@@ -196,13 +196,8 @@ function TabTable() {
         {tableData[activeTab]?.map((item, index) => (
           <div
             key={index}
-            className="group flex items-center gap-4 p-4 transition-colors duration-200 bg-white hover:shadow-xs md:gap-6 md:p-5 cursor-pointer rounded-md "
+            className="group flex items-center gap-4 p-4 transition-colors duration-200 bg-white hover:shadow-xs md:gap-6 cursor-pointer rounded-md"
           >
-            {/* ID/Number */}
-            {/* <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-purple-100 to-purple-200 text-sm font-semibold text-purple-700">
-              {item.id}
-            </div> */}
-
             <div className="w-10 h-10 rounded-md bg-[#F1E4FA] flex items-center justify-center text-sm">
               {item.id}
             </div>

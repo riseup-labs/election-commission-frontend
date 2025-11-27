@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export default function RecentNews() {
   return (
-    <div>
+    <div className="container mx-auto pt-6 pb-8">
       <PageTitle title={"সাম্প্রতিক খবর"} routes={["হোম", "সাম্প্রতিক খবর"]} />
 
       <div className="w-full md:pl-4">
@@ -35,7 +35,7 @@ export default function RecentNews() {
           {allNews.map((news, i) => {
             return (
               <div key={i}>
-                <div className={`relative h-40`}>
+                <div className={`relative h-45`}>
                   <Image
                     src="/images/ec2.jpg"
                     alt="news"
@@ -43,8 +43,8 @@ export default function RecentNews() {
                     fill
                   />
                 </div>
-                <div className="border border-t-0 p-3 shadow text-sm">
-                  <p className="text-xs">৫ অক্টোবর, ২০২৫</p>
+                <div className="border border-t-0 p-3 shadow text-sm  rounded-b-sm">
+                  <p className="text-xs text-[#FF4444]">৫ অক্টোবর, ২০২৫</p>
                   <p className="lg:text-lg font-semibold my-2">
                     বাংলাদেশ নির্বাচন কমিশনের একমাত্র অফিশিয়াল ইউটিউব চ্যানেল
                   </p>
@@ -55,7 +55,7 @@ export default function RecentNews() {
                   <Button
                     variant="outline"
                     className={
-                      "w-full mt-2 rounded-xs border-[#A1D6BC] text-[#008E48]"
+                      "w-full mt-2 rounded border-[#A1D6BC] text-[#008E48] cursor-pointer font-semibold hover:bg-[#008E48] hover:text-white"
                     }
                   >
                     বিস্তারিত দেখুন
@@ -71,12 +71,6 @@ export default function RecentNews() {
 }
 
 const allNews = [
-  {
-    date: "৫ অক্টোবর, ২০২৫",
-    title: "বাংলাদেশ নির্বাচন কমিশনের একমাত্র অফিশিয়াল ইউটিউব চ্যানেল",
-    desciption:
-      "চড়া মূল্যের কারণে গোশত কিনে খাওয়া এখন দরিদ্রদের জন্য স্বপ্নের মতো ব্যাপার হয়ে দাঁড়িয়েছে।",
-  },
   {
     date: "৫ অক্টোবর, ২০২৫",
     title: "বাংলাদেশ নির্বাচন কমিশনের একমাত্র অফিশিয়াল ইউটিউব চ্যানেল",
