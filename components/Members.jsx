@@ -43,6 +43,21 @@ const Members = () => {
                 />
               ))}
             </div>
+
+            <div className="my-4">
+              <SectionTitle label="নির্বাচন কমিশনার" />
+            </div>
+            <div className="grid grid-cols-1 gap-2.5">
+              <MemberCard
+                name="সিনিয়র সচিবের নাম"
+                image="/images/akhtar-ahmed-secretary-2.jpeg"
+                details="বাংলাদেশ নির্বাচন কমিশন ভবনটি ঢাকার আগারগাঁও এলাকায় অবস্থিত,
+                  যা দেশের নির্বাচন পরিচালনা ব্যবস্থার কেন্দ্রীয় প্রশাসনিক
+                  কার্যালয় হিসেবে ব্যবহৃত হয়। এখানে জাতীয় ও স্থানীয় নির্বাচনের
+                  পরিকল্পনা, পরিচালনা এবং ফলাফল প্রকাশের সমস্ত কার্যক্রম সম্পন্ন
+                  হয়।"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -52,7 +67,7 @@ const Members = () => {
 
 const MemberCard = ({ name = "", image = "", details = "" }) => (
   <div className="w-full border-l-4 border-[#653887] rounded-md">
-    <div className="min-h-[120px] h-full bg-white rounded p-2 flex gap-3 items-center">
+    <div className="min-h-[110px] h-full bg-white rounded p-2 flex gap-3 items-center">
       <div className="w-20 shrink-0">
         <Image
           src={image}

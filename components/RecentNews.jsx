@@ -7,7 +7,7 @@ export default function RecentNews() {
     {
       id: 1,
       day: "৫",
-      month: "জানুয়ারি",
+      month: "অক্টোবর",
       title:
         "জাতিকে একটি সুন্দর, গ্রহণযোগ্য ও স্বচ্ছ নির্বাচন উপহার দিতে চাই: সিইসি",
       link: "/",
@@ -16,7 +16,7 @@ export default function RecentNews() {
     {
       id: 2,
       day: "৫",
-      month: "জানুয়ারি",
+      month: "অক্টোবর",
       title:
         "জাতিকে একটি সুন্দর, গ্রহণযোগ্য ও স্বচ্ছ নির্বাচন উপহার দিতে চাই: সিইসি",
       link: "/",
@@ -25,7 +25,7 @@ export default function RecentNews() {
     {
       id: 3,
       day: "৫",
-      month: "জানুয়ারি",
+      month: "অক্টোবর",
       title:
         "জাতিকে একটি সুন্দর, গ্রহণযোগ্য ও স্বচ্ছ নির্বাচন উপহার দিতে চাই: সিইসি",
       link: "/",
@@ -57,32 +57,30 @@ export default function RecentNews() {
               // className="bg-white rounded-sm shadow hover:shadow-lg transition"
               className="relative mb-15"
             >
-              <div className="relative h-[325px]">
+              <div className="absolute top-4 left-4 bg-[#009951E5] z-10 text-white flex justify-center items-center flex-col rounded-full w-10 h-10">
+                <p className="text-sm  leading-snug">{item.day}</p>
+                <p className="text-[8px] text-white">{item.month}</p>
+              </div>
+              <div className="relative h-[280px]">
                 <Image
                   src={item.image}
                   alt="news"
                   className="object-cover rounded-sm"
-                  // width={489}
-                  // height={325}
                   fill
                 />
               </div>
 
-              <div className="bg-white rounded-sm shadow hover:shadow-lg w-[90%] absolute z-10 -bottom-15 left-1/2 -translate-x-1/2 p-4 h-[153px] flex flex-col justify-between">
-                <p className="font-semibold leading-snug text-sm">
+              <div className="bg-white rounded-sm shadow hover:shadow-lg w-[90%] absolute z-10 -bottom-18 left-1/2 -translate-x-1/2 p-4 h-[153px] flex flex-col justify-between">
+                <p className="font-semibold leading-snug">
                   {item.title}
                 </p>
                 <Link
                   href="/"
-                  className="text-[#15803D] text-sm flex items-center gap-1"
+                  className="text-[#15803D] text-sm flex items-center gap-1 cursor-pointer"
                 >
                   বিস্তারিত দেখুন
                   <ArrowRight className="w-3.5 h-3.5 text-[#15803D]" />
                 </Link>
-              </div>
-
-              <div>
-                <p className="text-sm text-[#15803D]">{item.date}</p>
               </div>
             </div>
           ))}
