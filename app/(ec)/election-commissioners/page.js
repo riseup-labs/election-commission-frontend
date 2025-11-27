@@ -57,20 +57,26 @@ export default function ElectionCommissioners() {
                 <TableRow key={i}>
                   <TableCell>
                     <Image
-                      src={data?.image}
+                      // src={data?.image}
+                      src={"/images/male-placeholder.png"}
                       alt={data?.name}
                       width={45}
                       height={45}
                     />
                   </TableCell>
                   <TableCell className="max-w-[200px] whitespace-normal wrap-break-words">
-                    {data?.name}
+                    {/* {data?.name} */}
+                    পুরো নাম
                   </TableCell>
-                  <TableCell>{data?.post}</TableCell>
                   <TableCell>
-                    {data?.contact?.map((contact) => (
+                    {/* {data?.post} */}
+                    পদবি ও দপ্তর
+                  </TableCell>
+                  <TableCell>
+                    {/* {data?.contact?.map((contact) => (
                       <p key={contact}>{contact}</p>
-                    ))}
+                    ))} */}
+                    abc@gmail.com
                   </TableCell>
                 </TableRow>
               );
@@ -107,22 +113,26 @@ export default function ElectionCommissioners() {
                 <TableRow key={i}>
                   <TableCell>
                     <Image
-                      src={data?.image}
+                      src={"/images/male-placeholder.png"}
+                      // src={data?.image}
                       alt={data?.name}
                       width={45}
                       height={45}
                     />
                   </TableCell>
                   <TableCell className="max-w-[200px] whitespace-normal wrap-break-words">
-                    {data?.name}
+                    {/* {data?.name} */}
+                    পুরো নাম
                   </TableCell>
                   <TableCell className="max-w-[250px] whitespace-normal wrap-break-words">
-                    {data?.post}
+                    {/* {data?.post} */}
+                    পদবি ও দপ্তর
                   </TableCell>
                   <TableCell>
-                    {data?.contact?.map((contact) => (
+                    {/* {data?.contact?.map((contact) => (
                       <p key={contact}>{contact}</p>
-                    ))}
+                    ))} */}
+                    abc@gmail.com
                   </TableCell>
                 </TableRow>
               );

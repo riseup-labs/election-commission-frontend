@@ -74,24 +74,24 @@ const tableHeads = [
 const tableData = [
   {
     id: "০০১",
-    name: "লিবারেল ডেমোক্রেটিক পার্টি - এলডিপি",
+    name: "রাজনৈতিক দলের নাম",
     date: "২০/১০/২০০৮",
-    signName: "ছাতা",
-    signImage: "/images/umbrella.png",
+    signName: "প্রতীকের নাম",
+    signImage: "/images/male-placeholder.png",
   },
   {
     id: "০০২",
-    name: "জাতীয় পার্টি - জেপি",
+    name: "রাজনৈতিক দলের নাম",
     date: "২০/১০/২০০৮",
-    signName: "ছাতা",
-    signImage: "/images/cycle.png",
+    signName: "প্রতীকের নাম",
+    signImage: "/images/male-placeholder.png",
   },
   {
     id: "০০৩",
-    name: "বাংলাদেশের সাম্যবাদী দল (এম.এল)",
+    name: "রাজনৈতিক দলের নাম",
     date: "২০/১০/২০০৮",
-    signName: "ছাতা",
-    signImage: "/images/tire.png",
+    signName: "প্রতীকের নাম",
+    signImage: "/images/male-placeholder.png",
   },
 ];
 

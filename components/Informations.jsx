@@ -192,20 +192,24 @@ function TabTable() {
       </div>
 
       {/* Table Content */}
-      <div className="divide-y divide-slate-100 max-h-[440px] overflow-y-auto">
+      <div className="max-h-[440px] overflow-y-auto p-3 flex flex-col gap-2">
         {tableData[activeTab]?.map((item, index) => (
           <div
             key={index}
-            className="group flex items-center gap-4 p-4 transition-colors duration-200 hover:bg-slate-50 md:gap-6 md:p-5 cursor-pointer"
+            className="group flex items-center gap-4 p-4 transition-colors duration-200 bg-white hover:shadow-xs md:gap-6 md:p-5 cursor-pointer rounded-md "
           >
             {/* ID/Number */}
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-purple-100 to-purple-200 text-sm font-semibold text-purple-700">
+            {/* <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-purple-100 to-purple-200 text-sm font-semibold text-purple-700">
+              {item.id}
+            </div> */}
+
+            <div className="w-10 h-10 rounded-md bg-[#F1E4FA] flex items-center justify-center text-sm">
               {item.id}
             </div>
 
             {/* Title */}
             <div className="min-w-0 flex-1">
-              <p className="text-sm font-medium transition-colors">
+              <p className="text-sm font-semibold transition-colors">
                 {item.title}
               </p>
             </div>

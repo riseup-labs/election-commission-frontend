@@ -1,15 +1,19 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
     <div className="container mx-auto flex justify-between h-[100px] pt-2">
       <div>
-        <Image
-          src="/images/logo.png"
-          alt="bangladesh election commission logo"
-          width={414}
-          height={92}
-        />
+        <Link href={"/"}>
+          <Image
+            src="/images/logo.png"
+            alt="bangladesh election commission logo"
+            width={414}
+            height={92}
+            className="cursor-pointer"
+          />
+        </Link>
       </div>
 
       {/* <div className="flex items-end">

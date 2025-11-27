@@ -28,7 +28,7 @@ const VisitorStats = () => {
             {/* Card 1 */}
             <div className="bg-white rounded-sm shadow-md py-10 px-6">
               <p className="text-4xl font-bold text-green-700">
-                {inView ? <CountUp duration={3} start={0} end={580} /> : 0}
+                {inView ? <CountUp duration={5} start={0} end={580} /> : 0}
               </p>
               <p className="text-gray-600 mt-2 text-sm">আজকের পরিদর্শন</p>
             </div>
@@ -36,7 +36,7 @@ const VisitorStats = () => {
             {/* Card 2 */}
             <div className="bg-white rounded-sm shadow-md py-10 px-6">
               <p className="text-4xl font-bold text-green-700">
-                {inView ? <CountUp duration={3} start={0} end={1025} /> : 0}
+                {inView ? <CountUp duration={5} start={0} end={1025} /> : 0}
               </p>
               <p className="text-gray-600 mt-2 text-sm">এই সপ্তাহে</p>
             </div>
@@ -45,7 +45,7 @@ const VisitorStats = () => {
             <div className="bg-white rounded-sm shadow-md py-10 px-6">
               <p className="text-4xl font-bold text-green-700">
                 {inView ? (
-                  <CountUp duration={3} start={100000} end={102456} />
+                  <CountUp duration={5} start={100000} end={102456} />
                 ) : (
                   0
                 )}

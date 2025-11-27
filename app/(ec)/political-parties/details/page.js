@@ -14,8 +14,8 @@ export default function PartyDetails() {
   return (
     <div>
       <PageTitle
-        title={"লিবারেল ডেমোক্রেটিক পার্টি - এলডিপি"}
-        routes={["হোম", "নিবন্ধিত রাজনৈতিক দল", "এলডিপি"]}
+        title={"রাজনৈতিক দলের নাম	"}
+        routes={["হোম", "নিবন্ধিত রাজনৈতিক দল", "দলের নাম"]}
       />
 
       <div className="flex justify-center mt-4">
@@ -35,7 +35,7 @@ export default function PartyDetails() {
                 <p className="text-sm">নিবন্ধন নম্বর: ০০১</p>
                 <div className="relative w-15 h-15">
                   <Image
-                    src={"/images/umbrella.png"}
+                    src={"/images/male-placeholder.png"}
                     alt={"umbrella logo"}
                     fill
                   />
@@ -45,20 +45,28 @@ export default function PartyDetails() {
 
             <div className="col-span-12 md:col-span-6 rounded-md bg-[#F9FAFB]">
               <div className="p-4 flex flex-col justify-between items-center">
-                <div className="relative w-[100px] h-[135px]">
-                  <Image src={"/images/nasir.png"} alt={"umbrella logo"} fill />
+                <div className="relative w-[100px] h-[100px]">
+                  <Image
+                    src={"/images/footer-logo.png"}
+                    alt={"umbrella logo"}
+                    fill
+                  />
                 </div>
-                <p className="mt-3">ডক্টর অলি আহমদ, বীর বিক্রম</p>
+                <p className="mt-3">পুরো নাম</p>
                 <p className="text-[#15803D] text-sm">প্রেসিডেন্ট</p>
               </div>
             </div>
 
             <div className="col-span-12 md:col-span-6 rounded-md bg-[#F9FAFB]">
               <div className="p-4 flex flex-col justify-between items-center">
-                <div className="relative w-[100px] h-[135px]">
-                  <Image src={"/images/nasir.png"} alt={"umbrella logo"} fill />
+                <div className="relative w-[100px] h-[100px]">
+                  <Image
+                    src={"/images/footer-logo.png"}
+                    alt={"umbrella logo"}
+                    fill
+                  />
                 </div>
-                <p className="mt-3">ডক্টর অলি আহমদ, বীর বিক্রম</p>
+                <p className="mt-3">পুরো নাম</p>
                 <p className="text-[#15803D] text-sm">প্রেসিডেন্ট</p>
               </div>
             </div>
@@ -78,7 +86,7 @@ export default function PartyDetails() {
                       <p className="text-sm">:</p>
                     </div>
                     <div className="col-span-6 md:col-span-9 flex justify-between">
-                      <p className="text-sm pt-0.5">{info?.value}</p>
+                      <p className="text-sm pt-0.5">{info?.label}</p>
                     </div>
                   </div>
                 ))}
