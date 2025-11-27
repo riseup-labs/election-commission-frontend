@@ -140,31 +140,33 @@ const tableData = [
   {
     name: "জনাব এ, এম, এম, নাসির উদ্দিন",
     post: "প্রধান নির্বাচন কমিশনার",
-    image: "/images/member.png",
+    image: "/images/nasir.png",
     contact: ["cec@ecs.gov.bd"],
   },
   {
     name: "জনাব আব্দুর রহমানেল মাছউদ",
     post: "নির্বাচন কমিশনার",
-    image: "/images/member.png",
+    image: "/images/masud.png",
     contact: ["cec@ecs.gov.bd"],
   },
-  {
-    name: "জনাব মোঃ আনোয়ারুল ইসলাম সরকার",
-    post: "নির্বাচন কমিশনার",
-    image: "/images/member.png",
-    contact: ["cec@ecs.gov.bd"],
-  },
+
   {
     name: "বেগম তাহমিদা আহমদ",
     post: "নির্বাচন কমিশনার",
-    image: "/images/member.png",
+    image: "/images/tahmida.png",
+    contact: ["cec@ecs.gov.bd"],
+  },
+
+  {
+    name: "জনাব মোঃ আনোয়ারুল ইসলাম সরকার",
+    post: "নির্বাচন কমিশনার",
+    image: "/images/anwarul.png",
     contact: ["cec@ecs.gov.bd"],
   },
   {
     name: "ব্রিগেডিয়ার জেনারেল আবুল ফজল মো: সানাউল্লাহ (অবসরপ্রাপ্ত)",
     post: "নির্বাচন কমিশনার",
-    image: "/images/member.png",
+    image: "/images/sanaullah.png",
     contact: ["cec@ecs.gov.bd"],
   },
 ];
@@ -173,31 +175,31 @@ const tableData2 = [
   {
     name: "জনাব মোহাম্মদ আশ্রাফুল আলম",
     post: "একান্ত সচিব, মাননীয় প্রধান নির্বাচন কমিশনার",
-    image: "/images/member.png",
+    image: "/images/ashraful.png",
     contact: ["02-55007509", "01718588381", "ashrafueo1@gmail.com"],
   },
   {
     name: "এস,এম, হাবিবুর রহমান",
     post: "একান্ত সচিব, মাননীয় নির্বাচন কমিশনার (আব্দুর রহমানেল মাছউদ) এর দপ্তর",
-    image: "/images/member.png",
+    image: "/images/habibur.png",
     contact: ["02-55007509", "01718588381", "ashrafueo1@gmail.com"],
   },
   {
     name: "রৌশন আরা বেগম",
     post: "একান্ত সচিব, মাননীয় নির্বাচন কমিশনার (বেগম তাহমিদা আহমদ) এর দপ্তর",
-    image: "/images/member.png",
+    image: "/images/roushon.png",
     contact: ["02-55007509", "01718588381", "ashrafueo1@gmail.com"],
   },
   {
     name: "জনাব মোহাম্মদ কামরুজ্জামান",
     post: "একান্ত সচিব, মাননীয় নির্বাচন কমিশনার (মোঃ আনোয়ারুল ইসলাম সরকার) এর দপ্তর",
-    image: "/images/member.png",
+    image: "/images/kamruzzaman.png",
     contact: ["02-55007509", "01718588381", "ashrafueo1@gmail.com"],
   },
   {
     name: "এ এস এম জাকির হোসেন",
     post: "একান্ত সচিব, মাননীয় নির্বাচন কমিশনার (ব্রিগেডিয়ার জেনারেল আবুল ফজল মো: সানাউল্লাহ (অবসরপ্রাপ্ত)) এর দপ্তর",
-    image: "/images/member.png",
+    image: "/images/jakir.png",
     contact: ["02-55007509", "01718588381", "ashrafueo1@gmail.com"],
   },
 ];

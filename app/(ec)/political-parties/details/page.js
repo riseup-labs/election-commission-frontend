@@ -46,11 +46,7 @@ export default function PartyDetails() {
             <div className="col-span-12 md:col-span-6 rounded-md bg-[#F9FAFB]">
               <div className="p-4 flex flex-col justify-between items-center">
                 <div className="relative w-[100px] h-[135px]">
-                  <Image
-                    src={"/images/member.png"}
-                    alt={"umbrella logo"}
-                    fill
-                  />
+                  <Image src={"/images/nasir.png"} alt={"umbrella logo"} fill />
                 </div>
                 <p className="mt-3">ডক্টর অলি আহমদ, বীর বিক্রম</p>
                 <p className="text-[#15803D] text-sm">প্রেসিডেন্ট</p>
@@ -60,11 +56,7 @@ export default function PartyDetails() {
             <div className="col-span-12 md:col-span-6 rounded-md bg-[#F9FAFB]">
               <div className="p-4 flex flex-col justify-between items-center">
                 <div className="relative w-[100px] h-[135px]">
-                  <Image
-                    src={"/images/member.png"}
-                    alt={"umbrella logo"}
-                    fill
-                  />
+                  <Image src={"/images/nasir.png"} alt={"umbrella logo"} fill />
                 </div>
                 <p className="mt-3">ডক্টর অলি আহমদ, বীর বিক্রম</p>
                 <p className="text-[#15803D] text-sm">প্রেসিডেন্ট</p>

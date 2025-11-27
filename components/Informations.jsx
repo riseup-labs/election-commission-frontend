@@ -102,7 +102,7 @@ function TabTable() {
         {tableData[activeTab]?.map((item, index) => (
           <div
             key={index}
-            className="group flex items-center gap-4 p-4 transition-colors duration-200 hover:bg-slate-50 md:gap-6 md:p-5"
+            className="group flex items-center gap-4 p-4 transition-colors duration-200 hover:bg-slate-50 md:gap-6 md:p-5 cursor-pointer"
           >
             {/* ID/Number */}
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-purple-100 to-purple-200 text-sm font-semibold text-purple-700">
