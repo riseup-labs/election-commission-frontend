@@ -9,10 +9,28 @@ import Link from "next/link";
 const Informations = () => {
   return (
     <div className="container mx-auto py-10">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-[53%_47%] gap-6">
+        <div className="bg-[#F9FAFB]">
+          <TabTable />
+        </div>
+
+        <div>
+          <InfoCardGrid />
+        </div>
+      </div>
+      {/* <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <div className="lg:col-span-7">
+          <TabTable />
+        </div>
+
+        <div className="lg:col-span-5">
+          <InfoCardGrid />
+        </div>
+      </div> */}
+      {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <TabTable />
         <InfoCardGrid />
-      </div>
+      </div> */}
     </div>
   );
 };
@@ -21,33 +39,56 @@ function TabTable() {
   const [activeTab, setActiveTab] = useState("latest");
 
   const tabs = [
-    { id: "latest", label: "সর্বশেষ", color: "bg-[#009951]" },
-    { id: "updates", label: "সাম্প্রতিক আপডেট", color: "bg-[#009951]" },
-    { id: "daily", label: "দৈনিক রিপোর্ট", color: "bg-[#009951]" },
-    { id: "decisions", label: "বোর্ডের সিদ্ধান্ত", color: "bg-[#009951]" },
-    { id: "recruitment", label: "নিয়োগ প্রদান", color: "bg-[#009951]" },
-    { id: "establishment", label: "প্রতিষ্ঠা", color: "bg-[#009951]" },
+    { id: "latest", label: "OCP/ICPV", color: "bg-[#009951]", count: 2 },
+    {
+      id: "updates",
+      label: "সাম্প্রতিক তথ্যসমূহ",
+      color: "bg-[#009951]",
+      count: 3,
+    },
+    { id: "daily", label: "নোটিশ বোর্ড", color: "bg-[#009951]", count: 0 },
+    {
+      id: "decisions",
+      label: "ভোটার নিবন্ধন",
+      color: "bg-[#009951]",
+      count: 0,
+    },
+    {
+      id: "recruitment",
+      label: "নির্বাচনী প্রগপন",
+      color: "bg-[#009951]",
+      count: 0,
+    },
+    { id: "establishment", label: "ভিডিও", color: "bg-[#009951]", count: 0 },
   ];
 
   const tableData = {
     latest: [
-      { id: "01", title: "প্রতিবন্ধী কল্যাণ ভাতা বিতরণ", date: "Feb 13, 2023" },
-      { id: "02", title: "সাধারণ ছুটি (মাসিক সমাবেশ)", date: "Feb 13, 2023" },
-      { id: "03", title: "বিশেষ খবর", date: "Feb 13, 2023" },
       {
-        id: "04",
-        title: "মাসিক তালিকা সংশ্লিষ্ট প্রকাশনা",
+        id: "০১",
+        title: "প্রবাসী ভোটারদের ভোটদান বিষয়ক",
         date: "Feb 13, 2023",
       },
       {
-        id: "05",
-        title: "কর্মচারী পদ পূরণের জন্য নিয়োগ বিজ্ঞপ্তি যোদেন",
+        id: "০২",
+        title: "পোস্টাল ভোটিং (আইটি সাপোর্টেড))",
         date: "Feb 13, 2023",
       },
-      { id: "06", title: "আগামী সপ্তাহসাপ্তা চলতি", date: "Feb 13, 2023" },
+      { id: "০৩", title: "বিদেশ ভ্রমন", date: "Feb 13, 2023" },
       {
-        id: "07",
-        title: "অফিস সংক্রান্ত বিশেষ নির্দেশনা প্রজ্ঞাপন দিশা",
+        id: "০৪",
+        title: "দ্বাদশ জাতীয় সংসদ নির্বাচনের প্রার্থীগণের হলফনামা",
+        date: "Feb 13, 2023",
+      },
+      {
+        id: "০৫",
+        title: "রাষ্ট্রপতি পদে নির্বাচিত প্রার্থীর নাম-ঠিকানা সম্বলিত গেজেট",
+        date: "Feb 13, 2023",
+      },
+      { id: "০৬", title: "অফিস আদেশ/অন্যান্য নোটিশ", date: "Feb 13, 2023" },
+      {
+        id: "0৭",
+        title: "রাষ্ট্রপতি পদে নির্বাচিত প্রার্থীর নাম-ঠিকানা সম্বলিত গেজেট",
         date: "Feb 13, 2023",
       },
     ],
@@ -73,32 +114,47 @@ function TabTable() {
     <div className="overflow-hidden rounded-md bg-[#F9FAFB] text-sm">
       {/* Tabs - Horizontal Scroll */}
       <div className="overflow-x-auto scrollbar-hide">
-        <div className="flex min-w-max border-b border-slate-200">
+        <div className="flex min-w-max border-b-2 border-[#009951] gap-0.5">
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`relative shrink-0 px-6 py-4 font-medium transition-all duration-200 hover:bg-slate-50 ${
-                activeTab === tab.id ? "text-white" : "text-vlack"
-              } cursor-pointer`}
+              onClick={() => activeTab !== tab.id && setActiveTab(tab.id)}
+              className={`relative shrink-0 px-6 py-3 font-medium transition-all duration-200 ${
+                activeTab === tab.id
+                  ? "text-white"
+                  : "text-black hover:text-[#009951]"
+              } cursor-pointer flex items-center gap-2`}
             >
               {/* Background color for active tab */}
-              {activeTab === tab.id && (
+              {activeTab === tab.id ? (
                 <span
-                  className={`absolute inset-0 ${tab.color} rounded-t-md`}
+                  className={`absolute inset-0 ${tab.color} rounded-t-md b`}
+                />
+              ) : (
+                <span
+                  className={`absolute inset-0 bg-[#E4E6EF] rounded-t-md b`}
                 />
               )}
 
               <span className="relative z-10 whitespace-nowrap">
                 {tab.label}
               </span>
+              {tab.count && (
+                <div
+                  className={` w-4 h-4 relative z-10 flex items-center justify-center rounded-full ${
+                    activeTab === tab.id ? "bg-white text-[#FF4444]" : "bg-[#FF4444] text-white"
+                  }`}
+                >
+                  <span className="leading-none text-xs">{tab.count}</span>
+                </div>
+              )}
             </button>
           ))}
         </div>
       </div>
 
       {/* Table Content */}
-      <div className="divide-y divide-slate-100">
+      <div className="divide-y divide-slate-100 max-h-[440px] overflow-y-auto">
         {tableData[activeTab]?.map((item, index) => (
           <div
             key={index}
