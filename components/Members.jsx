@@ -22,7 +22,7 @@ const Members = () => {
               <SectionTitle label="প্রধান নির্বাচন কমিশনার" />
             </div>
             <div className="grid grid-cols-1 gap-2.5">
-              <Link href={"/"}>
+              <Link href={"/election-commissioners/details"}>
                 <MemberCard
                   name="জনাব এ, এম, এম, নাসির উদ্দিন"
                   image="/images/nasir.png"
