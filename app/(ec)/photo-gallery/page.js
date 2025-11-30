@@ -1,4 +1,35 @@
+import PageTitle from "@/components/PageTitle";
 import Image from "next/image";
+
+export default function PoliticalParties() {
+  return (
+    <div>
+      <PageTitle
+        title="নিবন্ধিত রাজনৈতিক দল (৫৭)"
+        routes={["হোম", "নিবন্ধিত রাজনৈতিক দল"]}
+      />
+
+      <div className="w-full mt-4 md:pl-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="md:col-span-2 lg:row-span-2 h-[200px] md:h-[300px] lg:h-[500px] flex flex-col shadow-md">
+            <GalleryImage height="h-full" />
+            <GalleryContent />
+          </div>
+
+          {[...new Array(8)].map((_, i) => (
+            <div
+              key={i}
+              className="shadow-md rounded-md flex flex-col h-[200px] lg:h-[242px]"
+            >
+              <GalleryImage height="h-full" />
+              <GalleryContent />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const GalleryImage = ({ height = "" }) => (
   <div className={`relative ${height}`}>
@@ -11,43 +42,12 @@ const GalleryImage = ({ height = "" }) => (
   </div>
 );
 
-const GalleryContent = ({ text }) => {
+const GalleryContent = () => {
   return (
-    <div className="h-10 flex items-center justify-center bg-[#165798] rounded-b-md">
-      <p className="text-sm font-semibold text-white">{text}</p>
+    <div className="h-10 flex items-center justify-center bg-[#F9FAFB] rounded-b-md">
+      <p className="text-sm font-semibold">লোরেম ইপসাম ডলর সিট আমেট</p>
     </div>
   );
 };
 
-export default function ECGrid() {
-  const items = [
-    "ব্যাট্রল ভোটারস ক্লাবের তালিকা",
-    "দ্বিতীয় ভোটারের আবেদন সমূহ",
-    "ভোটার বাতিলের কারণ",
-    "যেই ভোটার ভোট কেটেছে",
-    "আমি নির্বাচনে মনোনয়ন",
-    "কেউ নেই কেউ ভোটার",
-    "মুল ভোটার মডেল",
-    "জেলা পর্যায়ে ভোটার তালিকা",
-  ];
-
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {/* Big Left Card */}
-      <div className="md:col-span-2 md:row-span-2 lg:col-span-2 lg:row-span-2 shadow-md rounded-md bg-white flex flex-col">
-        <GalleryImage height="h-[200px] md:h-[350px] lg:h-[420px]" />
-        <GalleryContent text="নির্বাচন কমিশনার (সিইসি) হিসেবে নিয়োগ লাভ করেন।" />
-      </div>
-
-      {/* Top Right Large Card */}
-
-      {/* 6 Small Cards */}
-      {items.map((t, i) => (
-        <div key={i} className="shadow-md rounded-md bg-white flex flex-col">
-          <GalleryImage height="h-[200px] md:h-[160px] lg:h-[180px]" />
-          <GalleryContent text={t} />
-        </div>
-      ))}
-    </div>
-  );
-}
+//bg-[#F9FAFB]
