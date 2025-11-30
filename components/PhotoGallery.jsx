@@ -78,12 +78,11 @@ const GalleryContent = () => {
   return (
     <div className="absolute inset-0 bg-linear-to-t from-black to-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
       <p className="text-sm font-semibold mb-2">
-        জনাব এ, এম, এম, নাসির উদ্দিন - প্রধান নির্বাচন কমিশনার
+        কার্ডে কোন সংশোধন করা হলে তার কি কোন রেকর্ড রাখা হবে
       </p>
 
       <p className="text-sm leading-relaxed">
-        জনাব এ এম এম নাসির উদ্দিন ২০২৪ সালের ২১ নভেম্বর তারিখে বাংলাদেশের প্রধান
-        নির্বাচন কমিশনার (সিইসি) হিসেবে নিয়োগ লাভ করেন।
+        সকল সংশোধনের রেকর্ড সেন্ট্রাল ডাটাবেজে সংরক্ষিত থাকে।
       </p>
     </div>
   );

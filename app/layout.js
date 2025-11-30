@@ -6,6 +6,12 @@ import NavMenu from "@/components/NavMenu";
 import SocialMediaBanner from "@/components/SocialMediaBanner";
 import Footer from "@/components/Footer";
 import localFont from "next/font/local";
+import { Roboto } from "next/font/google";
+
+export const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

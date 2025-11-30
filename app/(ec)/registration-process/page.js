@@ -1,3 +1,4 @@
+import DateAndSocialMedia from "@/components/DateAndSocialMedia";
 import PageTitle from "@/components/PageTitle";
 import { Square } from "lucide-react";
 import Image from "next/image";
@@ -11,23 +12,7 @@ export default function RegistrationProcess() {
       />
 
       <div className="w-full md:pl-4">
-        {/* date and social media area */}
-        <div className="mt-5 flex justify-between bg-red-40 border-b pb-2">
-          <p className="text-[#2C2C2C] text-sm">
-            আপডেট: ১৬ নভেম্বর ২০২৫, ১৬: ৪৮
-          </p>
-
-          <div className="flex gap-1.5">
-            <Image
-              src={"/icons/facebook.svg"}
-              alt="facebook logo"
-              {...imageProps}
-            />
-            <Image src={"/icons/x.svg"} alt="x logo" {...imageProps} />
-            <Image src={"/icons/share.svg"} alt="share icon" {...imageProps} />
-            <Image src={"/icons/print.svg"} alt="print icon" {...imageProps} />
-          </div>
-        </div>
+        <DateAndSocialMedia />
 
         {sections.map((step) => {
           return (

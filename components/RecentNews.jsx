@@ -75,7 +75,7 @@ export default function RecentNews() {
                   {item.title}
                 </p>
                 <Link
-                  href="/"
+                  href="/recent-news/details"
                   className="text-[#15803D] text-sm flex items-center gap-1 cursor-pointer"
                 >
                   বিস্তারিত দেখুন
