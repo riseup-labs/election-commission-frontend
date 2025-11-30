@@ -49,5 +49,3 @@ const GalleryContent = () => {
     </div>
   );
 };
-
-//bg-[#F9FAFB]

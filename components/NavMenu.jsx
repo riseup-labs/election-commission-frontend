@@ -109,13 +109,11 @@ export default function NavMenu() {
                 asChild
                 className="px-3 py-2 text-sm font-medium hover:bg-[#006C39] rounded transition-colors text-white hover:text-white"
               >
-                <Link href={"/"}> নির্বাচনী এলাকা</Link>
+                <Link href={"/videos"}>ভিডিও</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-
-        
       </div>
     </nav>
   );
