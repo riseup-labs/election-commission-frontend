@@ -3,38 +3,77 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="containe mx-auto flex justify-between flex-col lg:flex-row lg:h-[70px] pt-2">
-      <div className="container mx-auto">
-        <div className="px-5 lg:pl22">
-          <Link href={"/"}>
-            <Image
-              src="/images/logo.png"
-              alt="bangladesh election commission logo"
-              width={320}
-              height={40}
-              className="cursor-pointer"
-            />
-          </Link>
-        </div>
+    <div className="container mx-auto flex justify-between lg:h-20 pt-2">
+      <div>
+        <Link href={"/"}>
+          <Image
+            src="/images/logo.png"
+            alt="bangladesh election commission logo"
+            width={300}
+            height={92}
+            className="cursor-pointer"
+          />
+        </Link>
       </div>
 
-      <div className="h-full flex items-end pb-px w-full lg:w-1/2 relative">
-        <div className="h-[78px] bg-[#653887] w-full relative">
-          {/* curved overlay */}
-          <div className="absolute -left-[76px]">
-            <div className="h-[78px] w-[78px] relative">
-              <Image
-                src={"/images/navbar-overlay.svg"}
-                alt="navbar overlay"
-                className="object-cover"
-                fill
-              />
-            </div>
+      {/* <div className="flex items-end">
+        <div className="bg-[#653887] text-white flex h-18">
+          <div>
+            <p className="text-white/80">
+              <span className="text-xl font-bold text-white">৫৯</span> জাতীয়
+              সংসদ নির্বাচন
+            </p>
           </div>
-
-          <div></div>
         </div>
-      </div>
+      </div> */}
+
+      {/* <div className="mt-4 md:mt-0 w-full md:w-auto">
+          <div className="bg-[#653887] text-white py-4 px-6 rounded-l-3xl flex items-center gap-6">
+
+        
+            <div className="flex items-center gap-2">
+              
+              <div>
+                <p className="text-lg font-bold">৫১</p>
+                <p className="text-xs">জাতীয় সংসদ নির্বাচন</p>
+              </div>
+            </div>
+
+            <div className="h-10 w-px bg-white/40"></div>
+
+             
+            <div className="flex items-center gap-2">
+           
+              <div>
+                <p className="text-lg font-bold">১১.৯ কোটি</p>
+                <p className="text-xs">নিবন্ধিত ভোটার</p>
+              </div>
+            </div>
+
+            <div className="h-10 w-px bg-white/40"></div>
+
+        
+            <div className="flex items-center gap-2">
+              
+              <div>
+                <p className="text-lg font-bold">৪২,০০০+</p>
+                <p className="text-xs">ভোটকেন্দ্র</p>
+              </div>
+            </div>
+
+            <div className="h-10 w-px bg-white/40"></div>
+
+           
+            <div className="flex items-center gap-2">
+              
+              <div>
+                <p className="text-lg font-bold">৩৯</p>
+                <p className="text-xs">নিবন্ধিত রাজনৈতিক দল</p>
+              </div>
+            </div>
+
+          </div>
+        </div> */}
     </div>
   );
 };
