@@ -11,44 +11,92 @@ export default function PoliticalParties() {
 
       <div className="w-full mt-4 md:pl-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {/* BIG LEFT CARD */}
           <div className="md:col-span-2 lg:col-span-2 lg:row-span-2">
-            <GalleryImage height="h-[350px] md:h-[350px] lg:h-full" />
-            <GalleryContent />
+            <div className="w-full h-[400px] relative">
+              <Image
+                src="/images/ec2.jpg"
+                alt="news"
+                className="object-cover rounded-sm"
+                fill
+              />
+            </div>
           </div>
 
-          {/* RIGHT TOP */}
-          <div className="relative group overflow-hidden md:h-[250px] lg:col-span-2 lg:col-start-3">
-            <GalleryImage height="h-[350px] md:h-full" />
-            <GalleryContent />
+          <div className="lg:col-span-2 lg:col-start-3">
+            <div className="w-full h-[190px] relative">
+              <Image
+                src="/images/ec2.jpg"
+                alt="news"
+                className="object-cover rounded-sm"
+                fill
+              />
+            </div>
           </div>
 
-          {/* RIGHT MIDDLE */}
-          <div className="relative group overflow-hidden md:h-[250px] lg:col-span-2 lg:col-start-3 lg:row-start-2">
-            <GalleryImage height="h-[350px] md:h-full" />
-            <GalleryContent />
+          <div className="lg:col-span-2 lg:col-start-3 lg:row-start-2">
+            <div className="w-full h-[190px] relative">
+              <Image
+                src="/images/ec2.jpg"
+                alt="news"
+                className="object-cover rounded-sm"
+                fill
+              />
+            </div>
           </div>
 
-          {/* BOTTOM FOUR */}
-          <div className="relative group overflow-hidden md:h-[250px] lg:row-start-3">
-            <GalleryImage height="h-[350px] md:h-full" />
-            <GalleryContent />
-          </div>
-
-          <div className="relative group overflow-hidden md:h-[250px] lg:row-start-3">
-            <GalleryImage height="h-[350px] md:h-full" />
-            <GalleryContent />
-          </div>
-
-          <div className="relative group overflow-hidden md:h-[250px] lg:row-start-3">
-            <GalleryImage height="h-[350px] md:h-full" />
-            <GalleryContent />
+          <div className="lg:row-start-3">
+            <div className="w-full h-[200px] relative">
+              <Image
+                src="/images/ec2.jpg"
+                alt="news"
+                className="object-cover rounded-sm"
+                fill
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
 }
+
+const a = () => (
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    {/* BIG LEFT CARD */}
+    <div className="md:col-span-2 lg:col-span-2 lg:row-span-2">
+      <GalleryImage height="h-[350px] md:h-[350px] lg:h-full" />
+      <GalleryContent />
+    </div>
+
+    {/* RIGHT TOP */}
+    <div className="relative group overflow-hidden md:h-[250px] lg:col-span-2 lg:col-start-3">
+      <GalleryImage height="h-[350px] md:h-full" />
+      <GalleryContent />
+    </div>
+
+    {/* RIGHT MIDDLE */}
+    <div className="relative group overflow-hidden md:h-[250px] lg:col-span-2 lg:col-start-3 lg:row-start-2">
+      <GalleryImage height="h-[350px] md:h-full" />
+      <GalleryContent />
+    </div>
+
+    {/* BOTTOM FOUR */}
+    <div className="relative group overflow-hidden md:h-[250px] lg:row-start-3">
+      <GalleryImage height="h-[350px] md:h-full" />
+      <GalleryContent />
+    </div>
+
+    <div className="relative group overflow-hidden md:h-[250px] lg:row-start-3">
+      <GalleryImage height="h-[350px] md:h-full" />
+      <GalleryContent />
+    </div>
+
+    <div className="relative group overflow-hidden md:h-[250px] lg:row-start-3">
+      <GalleryImage height="h-[350px] md:h-full" />
+      <GalleryContent />
+    </div>
+  </div>
+);
 
 const GalleryImage = ({ height = "" }) => (
   <div className={`relative ${height}`}>
